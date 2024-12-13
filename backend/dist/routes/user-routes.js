@@ -1,6 +1,9 @@
 import { Router } from "express";
-import { getAllUsers } from "../controllers/user-controllers.js";
-const userRouter = Router();
-userRouter.get("/", getAllUsers);
-export default userRouter;
+import { getAllUsers, userLogin, userSignup } from "../controllers/user-controllers.js";
+import { loginValidator, signupValidator, validate } from "../utils/validator.js";
+const userRoutes = Router();
+userRoutes.get("/", getAllUsers);
+userRoutes.post("/signup", validate(signupValidator), userSignup);
+userRoutes.post("/login", validate(loginValidator), userLogin);
+export default userRoutes;
 //# sourceMappingURL=user-routes.js.map
