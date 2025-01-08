@@ -80,7 +80,7 @@ export const userLogin = async (req, res, next) => {
         });
         return res
             .status(200)
-            .json({ message: "OK", name: user.username, email: user.email });
+            .json({ message: "OK", user: user.username, email: user.email, id: user._id });
     }
     catch (error) {
         console.log(error);
