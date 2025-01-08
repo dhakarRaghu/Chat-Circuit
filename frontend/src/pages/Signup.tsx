@@ -25,7 +25,7 @@ const Signup = () => {
   };
   useEffect(() => {
     if (auth?.user) {
-      return navigate("/chat");
+      navigate("/chat");
     }
   }, [auth]);
   return (
@@ -38,7 +38,7 @@ const Signup = () => {
         flex={{ xs: 1, md: 0.5 }}
         justifyContent={"center"}
         alignItems={"center"}
-        padding={2}
+        padding={12}
         ml={"auto"}
         mt={16}
       >

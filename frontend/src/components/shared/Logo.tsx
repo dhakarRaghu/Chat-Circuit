@@ -27,7 +27,7 @@ const Logo = () => {
           textShadow: "2px 2px 20px #000",
         }}
       >
-        <span style={{ fontSize: "20px" }}>Chat</span>-Bot
+        <span style={{ fontSize: "20px" }}>Chat</span>-Circuit
       </Typography>
     </div>
   );
